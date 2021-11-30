@@ -2,3 +2,23 @@
   width: 200px;
   height: 200px;
 }
+
+.caixas-Buttons {
+  
+  display: none;
+}
+
+.caixa-Buttons-out {
+  transition: 4s;
+  
+  
+}
+
+
+
+.caixas-Buttons:hover {
+  display: inline;
+  background-color: rgb(209, 34, 34)
+}
+
+
