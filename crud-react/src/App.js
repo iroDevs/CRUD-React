@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useState } from 'react'
+import Quadrados from './components/Quadrados'
 
 function App() {
   const [cor, setCor] = useState("#5e72e4")
@@ -19,13 +20,15 @@ function App() {
     setQuadrados([]);
   }
   
-  function apareceConfig() {
-    setConfig(true)
-    
-  }
- function desapareceConfig(param){
-   setConfig(false)
+  
+
+ function editClick(){
+  console.log("edit");
  }
+ function deleteClick(){
+console.log("delete");
+ }
+
 
 
   return (
@@ -51,27 +54,8 @@ function App() {
             let style = {
               backgroundColor:cor,
             }
-            if(mostraConfig === true){
-               return(
-              <div  className="caixas" onMouseLeave={desapareceConfig} onMouseEnter={apareceConfig} key={index} style={style} >
-                <p className="caixas-name">{element.nome}</p>
-                <div className={`caixa-Buttons-out`}>
-                  <button className={`caixas-edit`} >EDIT</button>
-                  <button className={`caixas-delete`}>DELETE</button>
-                  </div>
-              </div> 
-            )
 
-            }
-            return(
-              <div  className="caixas" onMouseLeave={desapareceConfig} onMouseEnter={apareceConfig} key={index} style={style} >
-                <p className="caixas-name">{element.nome}</p>
-                <div className={`caixas-Buttons`}>
-                  <button className={`caixas-edit`} >EDIT</button>
-                  <button className={`caixas-delete`}>DELETE</button>
-                  </div>
-              </div> 
-            )
+           return <Quadrados key={index} cor={style} quadrado={element} />
 
           })}
       </main>
