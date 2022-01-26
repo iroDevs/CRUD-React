@@ -1,19 +1,20 @@
-
-import React from 'react';
+import {React, useState,useContext} from 'react';
+import ToDoContext from '../context/ToDoContext';
 
 export default function Lista() {
-  const ToDoList = [];
-  
-
+  const {lista,setLista} = useContext(ToDoContext)
+   const [toList , setToList] = useState([]);
   return (
     <div className="quadro">
+ <ul className="quadroLista list-group list-group-flush">
+    {lista.map((elem,index) =>{
+      return (
+         <li key={index} className="list-group-item">{elem}</li>
+      );
+    })}
      
-  <ul className="quadroLista list-group list-group-flush">
-  <li className="list-group-item">An item</li>
-  <li className="list-group-item">A second item</li>
-  <li className="list-group-item">A third item</li>
-  <li className="list-group-item">A fourth item</li>
-  <li className="list-group-item">And a fifth one</li>
+ 
+  
 </ul>
     </div>
   );

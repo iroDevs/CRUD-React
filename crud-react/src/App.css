@@ -31,6 +31,7 @@ body {
   flex-direction: column;
   justify-content:center;
   align-items:center;
+  margin-bottom: 20px;
 }
 
 .form-control{
@@ -50,8 +51,17 @@ body {
   font-weight:300;
   color: #fff;
   background-color: rgb(75, 13, 126);
-  border: 1px solid black
+  border: 1px solid black;
 }
+
+.list-group-item:hover {
+  font-size: 20px;
+  font-weight:300;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
 .opcoes{
   margin-top:60px;
   display: flex;
@@ -64,6 +74,19 @@ body {
 .opcoes button{
   margin: 10px;
   font-weight: 900;
+}
+
+.escolhas {
+  display: flex;
+  justify-content:center;
+}
+.escolhas p {
+  margin:20px
+}
+
+.escolhas p:hover {
+  text-decoration: underline;
+  cursor:pointer;
 }
 
 
